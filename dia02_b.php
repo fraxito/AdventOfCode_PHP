@@ -16,6 +16,7 @@ while( !feof($fichero) ){
         $aim += intval($linea[1]);
     }
 
+    
 }
 
 echo 'La X es: '.$x.' y la Y es: '.$y.' , multiplicados da '.($x*$y); 
