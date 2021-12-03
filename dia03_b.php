@@ -32,7 +32,7 @@ echo 'VALOR FINAL: '.$resultado1.'<br>';
 
 $longitud = 0;
 while ($longitud < $longi && count($datosN) != 1){
-    $signo = calculaBit2($longitud, $datosN); 
+    $signo = calculaBit($longitud, $datosN); 
     echo 'El bit es '.$signo.' ';
     $datos2 = array();
     for ($i=0; $i < count($datosN); $i++){
@@ -62,16 +62,5 @@ function calculaBit($posicion, $datos_){
         return 1;
     }else{
         return 0;
-    }
-}
-function calculaBit2($posicion, $datos_){
-    $unos = 0;
-    for ($i=0; $i < count($datos_); $i++){
-        $unos += intval(substr($datos_[$i], $posicion, 1));
-    }
-    if ($unos < count($datos_)/2 ){
-        return 0;
-    }else{
-        return 1;
     }
 }
